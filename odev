@@ -1,0 +1,32 @@
+class Canlilar {
+  String? Ad;
+  int? Yas;
+  bool? Cinsiyet;
+  Canlilar({this.Ad});
+
+  String Yuru() {
+    return "${this.ad} isimli canlı yürüyor.";
+  }
+  class Insan extends Canlilar {
+    String? Soyad;
+    bool? Gozluklumu;
+    double? Aylikgeliri;
+    static double? Vize;
+    static double? Final;
+
+    Insan(String ad, String soyad, bool gozluk, double gelir) {
+    this.Ad = ad;
+    this.Soyad = soyad;
+    this.GozlukluMu = gozluk;
+    this.Aylikgeliri = gelir;
+  }
+  Insan.Not(static double Vize , static double Final)
+  String Kos() {
+    return "${this.Ad} ${this.Soyad} koşuyor.";
+  }
+  static double Ortalama (){
+    Ortalama = Vize  * 0,30 + Final *0,70 ;
+  }
+  print(ins.Yuru());
+  print(ins.Kos());
+}
